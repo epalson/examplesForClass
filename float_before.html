@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* margin:auto */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .content img {
+            float: right;
+            /* clear:right; */
+            padding-left: 20px;
+            padding-bottom: 20px;
+            /* border: 1px solid #454444; */
+            width: 150px;
+            height: auto;
+        }
+        .content {
+            overflow: auto;
+        }
+
+        footer {
+            clear: both;
+            padding: 10px;
+            background-color: #f1f1f1;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#link1">Link 1</a></li>
+            <li><a href="#link2">Link 2</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+<!-- Why do the images appear side by side and not above and below one another? -->
+
+
+        <img src="images/BabsonWordmark-S-black.png" alt="Image 1">
+       
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+        
+        
+
+
+
+
+
+        <img src="images/BabsonWordmark-S-green.png" alt="Image 2">
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. </p>
+        
+    </div>
+
+    <footer>
+        &copy; 2025 Your Website. All rights reserved.
+    </footer>
+</body>
+</html>
