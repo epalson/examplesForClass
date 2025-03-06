@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #f4b400;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #4285f4;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #34a853;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #fbbc05;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ea4335;
+    padding: 20px;
+    text-align: center;
+}

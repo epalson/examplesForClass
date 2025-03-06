@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;  /* The box-sizing: border-box property in CSS changes the way the width and height of elements are calculated. By default, the box-sizing property is set to content-box, which means the width and height of an element only include the content, not the padding, border, or margin.
+
+    When you set box-sizing: border-box, the width and height of an element include the content, padding, and border, but not the margin. This makes it easier to manage the size of elements, especially when adding padding and borders, as the total size of the element remains consistent. */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* The line-height property specifies the height of a line. */
+}
+
+header, nav, main, footer {
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-around; /* try out different options for jusify-content */
+    background: #444;
+}
+
+nav ul li {
+    margin: 0 15px;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0 50px; /* how can we fix this so it looks good when at a smaller viewport? */
+}
+
+nav ul li:hover {
+    color: #fff;
+    text-decoration: underline;
+    background-color: #867474;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content p {
+    padding-bottom: 30px;
+}
+
+.mySidebar {
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.mySidebar img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .mySidebar {
+        order: -1; /* change this number to -1 to see the difference */
+        border: 1px solid #ccc;
+        text-align: center;
+        
+    }
+
+    .mySidebar img {
+        width: 50%;  /* change this to 100% to see the difference */
+        
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* try out different options for jusify-content */
+        background: #444;
+        text-align: center;
+    }
+    
+    
+}
