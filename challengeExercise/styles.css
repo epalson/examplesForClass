@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.mainContainer {
+    display: grid;
+  grid-template-areas:
+    "nav nav"  
+    "header header"
+    "main side"
+    "footer footer";
+  grid-template-columns: 3fr 1fr;
+    gap: 0px;
+    padding:0px;
+}
+
+
+
+nav { 
+    grid-area: nav;
+    /* border: 1px solid #0fa830; */
+    padding: 0px;
+    margin: 0px 10px;
+    width: 100%;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-around; 
+    background: #a10707;
+}
+
+nav ul li {
+    margin: 0 0px;
+    padding: 0px 20px;
+    
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 10px; 
+}
+
+nav ul li:hover {
+    text-decoration: none;
+    background-color: #082259;  /* I can make this a different shade of blue */
+    
+}
+
+nav ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+header {
+    grid-area: header;
+    background: #082259;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+    
+}
+
+main {
+    grid-area: main;
+    gap: 5px;
+    border: 0px solid #333;
+    padding: 30px 30px;
+}
+
+main p {
+    padding-bottom: 20px;
+    line-height: .90; 
+}
+
+side {
+    grid-area: side;
+    padding: 20px;
+    background: #a10707;
+    border: 1px solid #333;
+    text-align: center;
+    margin:10px;
+}
+
+side img {
+    width: 60%;
+    height: auto;
+    
+}
+
+/* Footer styles */
+footer {
+    grid-area: footer;
+    background-color: #082259;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;  
+    bottom: 0;
+    width: 100%;
+}
+
+/*Tablet size */
+@media (max-width: 1024px) {
+    .mainContainer {
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "main side"
+            "footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .main {
+        font-size: 20pt;
+    }
+
+    side {
+        margin: 0;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+/*Mobile size */
+@media (max-width: 600px) {
+    .mainContainer {
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "side"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    side {
+        margin: 0;
+    }
+
+    footer {
+        position: static;
+    }
+}

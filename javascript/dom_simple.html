@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and getElementById Lab</title>
+</head>
+<body id="bodyBack">
+    <h1>Welcome to the DOM Lab!</h1>
+    <p id="intro">This is an introductory paragraph.</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        function changeBackgroundColor() {
+            var paragraph = document.getElementById("bodyBack");
+            paragraph.style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
