@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark myNav">
+  <div class="container-fluid rightAlign">
+    <a class="navbar-brand" href="#">UUUU</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" 
+    id="navbarSupportedContent">
+
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#collapsibleNavbar">
+    
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT OUR TEAM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT US DAY AND NIGHT 24/7</a>
+        </li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid mt-3">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+</div>
+
+<div class="container">     
+    <div class="row">
+   
+        <!-- Play with the values of the col, col-md and col-lg to learn more about the grid -->
+      <div class="col-12 col-md-6 col-lg-4 bg-success">Stuff</div>
+      <div class="col-12 col-md-6 col-lg-4 bg-warning">Stuff 2</div>
+      <div class="col-12 col-md-12 col-lg-4 bg-success">stuff 3</div>
+    </div>
+  </div>
+  <div class="container mt-3">
+    <h2>Image</h2>
+    <p>The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+    <img class="img-fluid" src="images/ny.jpg" alt="New York" width="1100" height="500"> 
+  </div>
+
+</body>
+</html>

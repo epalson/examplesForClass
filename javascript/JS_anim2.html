@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bouncing Ball</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+    <script>
+        const ball = document.getElementById('ball');
+        let positionY = 0;
+        let positionX = 0;
+        let directionY = 1;
+        let directionX = 1;
+        let speedY = 2;
+        let speedX = 2;
+        let lastMouseY = 0;
+        let lastMouseX = 0;
+
+        function animate() {
+            positionY += speedY * directionY;
+            positionX += speedX * directionX;
+            if (positionY > window.innerHeight - 50 || positionY < 0) {
+                directionY *= -1;
+            }
+            if (positionX > window.innerWidth - 50 || positionX < 0) {
+                directionX *= -1;
+            }
+            ball.style.top = positionY + 'px';
+            ball.style.left = positionX + 'px';
+            requestAnimationFrame(animate);
+        }
+
+        function updateSpeed(event) {
+            const mouseY = event.clientY;
+            const mouseX = event.clientX;
+            speedY = Math.abs(mouseY - lastMouseY) / 10;
+            speedX = Math.abs(mouseX - lastMouseX) / 10;
+            lastMouseY = mouseY;
+            lastMouseX = mouseX;
+        }
+
+        document.addEventListener('mousemove', updateSpeed);
+        animate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loop Example</title>
+</head>
+<body>
+    <h1>Array and Loop Example</h1>
+    <div id="output"></div>
+
+    <script>
+        // Example of an array
+        const fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+        // Get today's date
+        const today = new Date();
+        const dateArray = [
+            "Year: " + today.getFullYear(),
+            "Month: " + (today.getMonth() + 1), // Months are zero-based
+            "Day: " + today.getDate()
+        ];
+
+        // Example of a loop for fruits
+        let output = "<h2>Fruits List:</h2><ul>";
+        for (let i = 0; i < fruits.length; i++) {
+            output += "<li>" + fruits[i] + "</li>";
+        }
+        output += "</ul>";
+
+        // Example of a loop for date
+        output += "<h2>Today's Date:</h2><ul>";
+        for (let i = 0; i < dateArray.length; i++) {
+            output += "<li>" + dateArray[i] + "</li>";
+        }
+        output += "</ul>";
+
+        // Display the output in the div
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

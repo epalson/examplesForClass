@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The setInterval() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+setInterval(displayHello, 1000);
+
+function displayHello() {
+  var demoElement = document.getElementById("demo");
+  if (demoElement.innerHTML === "Hello") {
+    demoElement.innerHTML = "";
+  } else {
+    demoElement.innerHTML = "Hello";
+  }
+}
+</script>
+
+</body>
+</html>
